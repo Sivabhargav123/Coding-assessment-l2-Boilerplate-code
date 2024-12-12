@@ -1,22 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logoContainer">
+        <img
+          src="https://s3-alpha-sig.figma.com/img/2727/769b/a74736d502746301ed573ed8940fc322?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eQ~Ob1JfIzwztu98MeKCLhmFDsSaM5jYcgxP-Ly2Tr5OwtVarco-JLG09CZRJS3Eee~widDH5oBu4OSsPtHIBXXHT5Da5WK3~8pw70It-wNPaXbA3z89y1OWl-aRWqj7R1jh4e287I6kIxtmhxKF2Zo9mxw9aZLY6Gp4Kmrbnm2Gneb2BxfQxC7ptSZeJUh5RDV59-ptrsMitGTbiE5XhDw8Xls5P9r040aa8oRrVYD93cS9NlpSDQcPMnSym9P5M720gfKsgO4kLj8rnpsA~e1~iIYm0rOayKgsXxfMHTO-HATWs5i1wEYPH3MEPYRqwwFWLNaWZ33XutpZcDBKeA__"
+          class="marmetoLogo"
+        />
+        <p class="logoName">Marmeto</p>
+      </div>
+      <nav class="logoContainer" >
+        <ul class="logoCUl">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="logoContainer">
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-search"></i> </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-heart"></i> </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="marmetoBgImgContainer">
+        <img
+          src="https://s3-alpha-sig.figma.com/img/1461/f3d6/ff74c027a1888544144abe4be6e02cbf?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CJzUmGSk4dQW4F5hg87itVdbgOE1EvVy82-bPZlP2iZ6pblcWloKIhYoCgI3cKwKPusnnT19VhUzF7lsWKT4RkANJfo3lj8NubvTbFW~V3Dp92U-zB1Dpe-hfZ4hSxYE5j2a-sKAiWR69KvvNpUKBd4EgNqj4ewJhYQSzNjZgZU0i4DXuoF4YOkd4C1CGsf5ZjidDGST4vmnX6cHM63Wf-fsyHaEkM-RfFVHI12G8W3X6-oAeNX~-vnO3S6eG0yk0Y9fRD6YAHEalV-coZYAr4eNoTvkL0rMjEUYBpNMJiYljE4zeb~Mm36GtUM7SuxDdmj2524-BHBv20usOe-9Yg__"
+          class="marmetoBgImg"
+        />
+      </div>
+      <div class="cart-container">
+        <div class="cart-items">
+          <!-- <div class="ProductCartDetails">
+            <div>Price</div>
+            <div>Quantity</div>
+            <div>Subtotal</div>
+          </div> -->
+          <div id="cart-list"></div>
+        </div>
+        <div class="marmetoProductDetailsContainer">
+          <div class="">
+            <!-- <h1 class="">Product image</h1> -->
+          </div>
+        </div>
+        <div class="cart-totals">
+          <h3 class="cartTotalsHeading">Cart Totals</h3>
+          <div class="marmetoCartDetailsContainer">
+            <p class="cartSubTotalP">Subtotal:</p>
+            <span class="cartSubTotalSpan" id="subtotal">₹0</span>
+          </div>
+          <div class="marmetoCartDetailsContainer">
+            <p class="cartSubTotal">Total:</p>
+            <span class="cartSubTotalSpan" id="total">₹0</span>
+          </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
-    <title>Coding Assesment L2 boilerplate</title>
+          <button id="checkout-btn" class="checkOutBtn">Check Out</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footerInfoC"> 
+      <div class="footer-info">
+        <div class="footerInfosubC">
+          <div class="FooterIconsImgC">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="footerDetailsSpan">
+            <span>High Quality</span>
+            <p>Creafted from top materials</p>
+          </div>
+        </div>
 
-</head>
+        <div class="footerInfosubC">
+          <div class="FooterIconsImgC">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="footerDetailsSpan">
+            <span>Warranty Protection</span>
+            <p>Over 2 years</p>
+          </div>
+        </div>
 
-<body>
-    <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
+        <div class="footerInfosubC">
+          <div class="FooterIconsImgC">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <div class="footerDetailsSpan">
+            <span>Secure Payments</span>
+            <p>Order over 20$</p>
+          </div>
+        </div>
+
+        <div class="footerInfosubC">
+          <div class="FooterIconsImgC">
+            <i class="fas fa-headset"></i>
+          </div>
+
+          <div class="footerDetailsSpan">
+            <span>24/7 Support</span>
+            <p>Dedicated Support</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
-</body>
-
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
